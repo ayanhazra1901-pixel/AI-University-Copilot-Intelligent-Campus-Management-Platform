@@ -3,6 +3,6 @@
 import React from 'react';
 import { CampusLoginPage } from '@/components/CampusLoginPage';
 
-export default function HomePage() {
+export default function LoginPage() {
   return <CampusLoginPage />;
 }

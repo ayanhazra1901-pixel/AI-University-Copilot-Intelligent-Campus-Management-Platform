@@ -5,7 +5,7 @@ import { signToken } from '@/lib/auth';
 
 export async function POST(request: Request) {
   try {
-    const { email, password } = await request.json();
+    const { email, password, requiredRole } = await request.json();
 
     if (!email || !password) {
       return NextResponse.json({ error: 'Email and password are required' }, { status: 400 });
@@ -23,6 +23,20 @@ export async function POST(request: Request) {
     const isValid = bcrypt.compareSync(password, user.password);
     if (!isValid) {
       return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });
+    }
+
+    // Role-specific check if requiredRole is passed (e.g. from Admin Login)
+    if (requiredRole && user.role !== requiredRole) {
+      if (requiredRole === 'ADMIN') {
+        return NextResponse.json(
+          { error: 'Access Denied: Only authorized University Administrators may access this portal.' },
+          { status: 403 }
+        );
+      }
+      return NextResponse.json(
+        { error: `Access Denied: Account does not have ${requiredRole} privileges.` },
+        { status: 403 }
+      );
     }
 
     const token = signToken({
