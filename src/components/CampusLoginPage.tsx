@@ -150,30 +150,32 @@ export function CampusLoginPage() {
         <div className="w-full max-w-[440px] bg-white/98 rounded-[28px] shadow-2xl border border-white/60 p-6 sm:p-8 backdrop-blur-sm animate-in fade-in zoom-in-95 duration-200">
           {/* University Emblem & Crest */}
           <div className="flex flex-col items-center text-center mb-5">
-            <div className="flex items-center justify-center space-x-2 mb-1">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-rose-700 via-rose-600 to-indigo-700 flex items-center justify-center text-white font-serif font-black text-sm shadow-xs tracking-tight">
-                DBS
-              </div>
-              <div className="text-left">
-                <div className="text-sm font-extrabold text-[#7e22ce] tracking-tight leading-tight uppercase font-serif">
-                  DBS GLOBAL
+            <div className="flex items-center justify-center space-x-3 mb-1.5">
+              <img
+                src="/galgotias_emblem.png"
+                alt="Galgotias University Emblem"
+                className="w-12 h-12 object-contain drop-shadow-xs"
+              />
+              <div className="text-left font-serif select-none">
+                <div className="text-base font-black text-[#0f2952] tracking-wider leading-none uppercase">
+                  GALGOTIAS
                 </div>
-                <div className="text-[10px] font-semibold text-slate-600 tracking-widest uppercase font-serif -mt-0.5">
+                <div className="text-[10.5px] font-bold text-[#003b73] tracking-[0.24em] leading-tight uppercase mt-0.5">
                   UNIVERSITY
                 </div>
               </div>
             </div>
 
             <div className="text-xs font-semibold text-slate-800 mt-1">
-              DBS Global University
+              Galgotias University
             </div>
 
             <button
               type="button"
-              onClick={() => alert('DBS Global University is configured as the active primary campus node.')}
+              onClick={() => alert('Galgotias University is configured as the active primary campus node.')}
               className="text-[11px] text-[#0284c7] hover:underline font-medium mt-0.5"
             >
-              Not from DBS Global University?
+              Not from Galgotias University?
             </button>
           </div>
 
