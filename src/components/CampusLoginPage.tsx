@@ -74,17 +74,12 @@ export function CampusLoginPage() {
 
       {/* Top Header */}
       <header className="relative z-20 w-full h-16 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 sm:px-8 flex items-center justify-between shadow-xs">
-        {/* Brand / Logo on Left (matching reference) */}
-        <div className="flex items-center space-x-2">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="flex items-center space-x-1.5 text-[#0284c7] font-black text-2xl tracking-tighter">
-              <span className="text-slate-800 text-xl font-normal lowercase">my</span>
-              <span className="text-[#0284c7] font-bold text-2xl">Camu</span>
-            </div>
-            <div className="hidden sm:flex flex-col border-l border-slate-300 pl-2.5 ml-1">
-              <span className="text-[11px] font-bold text-slate-800 leading-tight">CampusIQ</span>
-              <span className="text-[9px] text-slate-500 font-medium">Digital Campus OS</span>
-            </div>
+        {/* Brand Name on Left */}
+        <div className="flex items-center">
+          <Link href="/" className="flex items-center group">
+            <span className="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-indigo-600 transition">
+              CampusIQ
+            </span>
           </Link>
         </div>
 
